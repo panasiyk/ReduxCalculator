@@ -102,9 +102,9 @@ body{
     height: 375px;
     top: 19%;
     margin: -10px;
-    background: #696e64;
+    background: #8f1f1f;
     position: absolute;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 .tooManySymbols{
     display: block;

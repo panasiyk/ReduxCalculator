@@ -46,9 +46,8 @@ const addNumber = (state = initialState,action) =>{
                 answer = eval(answer.substring(0, answer.length - 1)).toString();
                 return {...state,inputText:[answer]};
             }
-            else {
                 let answer = eval(state.inputText.join(''));
-                if (answer % 2 !== 0){
+                if ((answer ^ 0) !== answer){
                     answer = answer.toFixed(3)
                 }
                 return {...state,
@@ -57,7 +56,6 @@ const addNumber = (state = initialState,action) =>{
                         state.inputText.join('').toString()+'='+answer.toString()
                     ]
                 };
-            }
         }
         case  'DOT':{
             if( state.inputText[state.inputText.length-1].substr(-1) === '+' ||
